@@ -3,11 +3,28 @@ package com.codefight;
 public class AlmostIncreasingSequence {
 
 	public static void main(String[] args) {
-		int[] seq = {1, 2, 3, 4, 3, 6};
+		int[] seq = {1, 2, 3, 4, 99, 5, 6};
 		System.out.println(almostIncreasingSequence(seq));
 	}
 
 	static boolean almostIncreasingSequence(int[] sequence) {
+		int length = sequence.length;
+		int count = 0;
+		for(int index=0; index < length-1; index++){
+			if(sequence[index+1] <= sequence[index]){
+				count++;
+				if(index-1 >= 0 
+						&& index+2 <= length-1 
+						 && sequence[index] - sequence[index+2] >= 0
+			               && sequence[index-1] - sequence[index+1] >= 0) {			                
+							return false;
+				}
+			}
+		}
+		return count <=1;
+	}
+
+	static boolean almostIncreasingSequence1(int[] sequence) {
 		int length = sequence.length;
 		if(length ==1) return true;
 		if(length ==2 && sequence[1] > sequence[0]) return true;

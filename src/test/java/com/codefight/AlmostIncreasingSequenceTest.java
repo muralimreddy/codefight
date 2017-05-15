@@ -70,7 +70,7 @@ public class AlmostIncreasingSequenceTest {
 	@Test
 	public void test10() {
 		int[] sequence = { 1, 1 };
-		assertTrue(sequencer.almostIncreasingSequence(sequence));
+		assertFalse(sequencer.almostIncreasingSequence(sequence));
 	}
 
 	@Test

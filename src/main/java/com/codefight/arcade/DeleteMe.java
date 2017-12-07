@@ -1,4 +1,4 @@
-package com.codefight;
+package com.codefight.arcade;
 
 import java.util.Arrays;
 

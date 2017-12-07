@@ -1,7 +1,10 @@
-package com.codefight;
+package com.codefight.arcade;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.codefight.arcade.WordLadder;
+
 import static org.junit.Assert.assertEquals;
 
 public class WordLadderTest {

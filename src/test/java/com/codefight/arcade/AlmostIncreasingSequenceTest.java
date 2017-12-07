@@ -1,7 +1,10 @@
-package com.codefight;
+package com.codefight.arcade;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.codefight.arcade.AlmostIncreasingSequence;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 

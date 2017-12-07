@@ -1,4 +1,4 @@
-package com.codefight;
+package com.codefight.arcade;
 
 public class MatrixElementsSum {
 

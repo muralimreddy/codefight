@@ -3,10 +3,19 @@ package com.codefight.challanges;
 public class InvertPictureFrame {
 
 	public static void main(String[] args) {
-		int[][] printArr = invertPictureFrame(4);
+		int x = 4;
+		int f = 1;
+		int[][] printArr = invertPictureFrame(x);
+		for(int i=0; i < x; i++){
+			for(int j=0; j < x; j++){
+				System.out.print(f++ + "   ");
+			}
+			System.out.println();
+		}
+		System.out.println("-------------------");
 		for (int[] is : printArr) {
-			for (int i : is) {
-				System.out.print(i + " ");
+			for (int o : is) {
+				System.out.print(o + "   ");
 			}
 			System.out.println();
 		}
@@ -36,5 +45,17 @@ public class InvertPictureFrame {
 		   return array;
 		}
 
+	/*
+	 * 
+		1   2    3    4   
+		5   6    7    8   
+		9   10   11   12   
+		13  14   15   16   
+		-------------------
+		1   5    9    13   
+		2   6    7    14   
+		3   10   11   15   
+		4   8    12   16   
+	 */
 
 }

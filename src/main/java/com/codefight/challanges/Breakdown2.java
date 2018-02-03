@@ -3,12 +3,42 @@ package com.codefight.challanges;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
-
+/**
+ * 
+ * @author muralimanohar
+ * Given an array of strings, output the following:
+ * An array of various whole, positive numbers, as defined in the examples.
+ * Example
+ * For strings = ["2,3", "1,8", "3,11"], the output should be
+ * breakDown2(strings) = [2, 1, 3, 264, 88, 33, 24].
+ * Layout:
+ * c misc b
+ * "2 , 3"
+ * "1 , 8"
+ * "3 , 11"
+ * Output:
+ * [c1, c2, c3, B, B1, B2, B3],
+ * Where B = b1 * b2 * b3
+ * And B# = B / b# where # = 1, 2, or 3
+ * So, the output is:
+ * [2, 1, 3, 264, 88, 33, 24].
+ * 
+ * NOTE!
+ * The misc can be ANYTHING.
+ * 
+ * Input/Output
+ * [execution time limit] 3 seconds (java)
+ * [input] array.string strings
+ * Guaranteed constraints:
+ * strings.length = 3,
+ * 1 ≤ numbers in strings < 10^10.
+ * [output] array.integer64
+ * 
+ * An array as outlined above.
+ *
+ */
 public class Breakdown2 {
-
 	public static void main(String[] args) {
-		//String[] ary = {"2**11", "5**7", "13**19"};
 		String[][] ary = {
 				{"2,3", "1,8", "3,11"}, //[2, 1, 3, 264, 88, 33, 24]
 				{"5=8", "4=9", "1=11"}, //5, 4, 1, 792, 99, 88, 72

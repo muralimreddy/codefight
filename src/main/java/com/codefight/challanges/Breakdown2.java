@@ -38,12 +38,12 @@ public class Breakdown2 {
 		}
 	}
 	
-	static long[] breakDown2(String[] strings) {
-		long b[] = new long [3];
-		long c[] = new long [7];
+	static long[] breakDown2(String[] in) {
+	    long b[] = new long [in.length];
+	    long c[] = new long [in.length *2 + 1];
 		int i=0;
 		long med =1;
-		for (String s : strings) {
+		for (String s : in) {
 			String sp[] = s.split("[^\\p{L}0-9']+");
 			c[i] = Long.parseLong(sp[0]);
 			b[i] = Long.parseLong(sp[1]);

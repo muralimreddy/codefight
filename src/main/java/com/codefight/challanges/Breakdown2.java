@@ -1,6 +1,8 @@
 package com.codefight.challanges;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Breakdown2 {
@@ -40,23 +42,23 @@ public class Breakdown2 {
 	
 	static long[] breakDown2(String[] in) {
 	    long b[] = new long [in.length];
-	    long c[] = new long [in.length *2 + 1];
+	    List<Long> s = new ArrayList<>();
 		int i=0;
 		long med =1;
-		for (String s : in) {
-			String sp[] = s.split("[^\\p{L}0-9']+");
-			c[i] = Long.parseLong(sp[0]);
+		for (String y : in) {
+			String sp[] = y.split("[^\\p{L}0-9']+");
+			s.add(Long.parseLong(sp[0]));
 			b[i] = Long.parseLong(sp[1]);
 			med *= b[i];
 			i++;
 		}
-		c[i++] = med;
+		s.add(med);
 		for(int m = b.length-1; m >=0; m--){
 			for(int n = m-1; n >=0; n--){
-				c[i++] = b[m] * b[n];
+				s.add(b[m] * b[n]);
 			}
 		}
-		return c;
+		return s.stream().mapToLong(l->l).toArray();
 	}
 
 }

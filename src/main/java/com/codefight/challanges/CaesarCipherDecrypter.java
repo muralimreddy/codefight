@@ -10,7 +10,33 @@ import java.util.TreeSet;
 
 /**
  * @author muralimanohar
+ *The captain has just intercepted a message from the opposition. But they were clever (or not?) enough to encode it using the Caesar Cipher, leaving the captain unable to get the information he needed.
  *
+ *Having zero patience with figuring out the right number themselves, they ask for you and the IT department's help to crack the message.
+ *
+ *You and the IT department are bored as well, and decide to just mess around and see who can make a program that can crack the encoded string (Nobody wants to shift it 26 times, that's boring and tedious!)
+ *
+ *Example
+ *For messge = "Uijt jt b sfbebcmf tusjoh jo Fohmjti!", the output should be
+ *privateEyesOnly(message) = "This is a readable string in English!".
+ *
+ *Out of all the 26 possible shifts, the only readable (and valid) string is when you shift 25 times "This is a readable string in English!".
+ *
+ *Input/Output
+ *
+ *[execution time limit] 3 seconds (java)
+ *
+ *[input] string message
+ *
+ *The encoded string, and it is guaranteed to be readable in English and forms a sentence(s).
+ *
+ *Guaranteed constraints:
+ *9 < a.length < 2000.
+ *The only special characters are ' , . ! ? ( )
+ *
+ *[output] string
+ *
+ *The decoded string, shifted the right amount without ruining the capitalization and punctuation.
  */
 public class CaesarCipherDecrypter {
 
@@ -110,6 +136,35 @@ public class CaesarCipherDecrypter {
 		return 0;
 	}
 
-
-
 }
+
+/**
+ * Input:
+ * message: "Czqm hs Ingm chc xnt enqfds sgd rghes mtladq? Hs'r 1!"
+ * Output:
+ * "Darn it John did you forget the shift number? It's 1!"
+ * Expected Output:
+ * "Darn it John did you forget the shift number? It's 1!"
+ * 
+ * 
+ * Input:
+ * message: "Arire tbaan tvir lbh hc, arire tbaan yrg lbh qbja, arire tbaan eha nebhaq naq qrfreg lbh."
+ * Output:
+ * "Never gonna give you up, never gonna let you down, never gonna run around and desert you."
+ * Expected Output:
+ * "Never gonna give you up, never gonna let you down, never gonna run around and desert you."
+ * 
+ * Input:
+ * message: "Yg'tg pq uvtcpigtu vq nqxg, aqw mpqy vjg twngu cpf uq fq K."
+ * Output:
+ * "We're no strangers to love, you know the rules and so do I."
+ * Expected Output:
+ * "We're no strangers to love, you know the rules and so do I."
+ * 
+ * Input:
+ * message: "Jveu lezk B9 kf kyv ivri fw kyv tzkp, givgriv wfi srtblg."
+ * Output:
+ * "Send unit K9 to the rear of the city, prepare for backup."
+ * Expected Output:
+ * "Send unit K9 to the rear of the city, prepare for backup."
+**/

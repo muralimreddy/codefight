@@ -12,7 +12,6 @@ public class HouseRobber {
 		for(int n: nums) sum += n;
 		int average = sum/nums.length;
 		if(nums.length >1){
-			if(nums[0]-)
 		}
 		
 		

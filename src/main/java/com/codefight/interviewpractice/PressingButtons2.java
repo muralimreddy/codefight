@@ -5,7 +5,12 @@ import java.util.Arrays;
 public class PressingButtons2 {
 
 	public static void main(String[] args) {
-		pressingButtons("8888");
+		String[] results = pressingButtons("8888");
+
+		System.out.println("Length: " + results.length);
+		for(String r: results){
+			System.out.print(r + " ");
+		}
 	}
 
 	static String[] pressingButtons(String buttons) {

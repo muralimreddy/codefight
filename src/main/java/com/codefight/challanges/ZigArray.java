@@ -3,10 +3,10 @@ package com.codefight.challanges;
 public class ZigArray {
 
 	public static void main(String[] args) {
-		getZigZagArray(3);
+		getZigZagArray(5);
 	}
 	
-	
+
 
 	public static int[][] getZigZagArray(int mSize){
 		int[][] zigZag = new int[mSize][mSize];
